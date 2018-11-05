@@ -46,10 +46,10 @@
 	margin: 20px;
 	position: relative;
 	padding: 40px;
-	display: inline-block;
 	width: 25%;
 	background-color: #CCCCCC;
 	height: 200px;
+	display: inline-block;
 }
 
 .leftsquare h1 {
