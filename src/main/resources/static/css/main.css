@@ -47,9 +47,9 @@
 	position: relative;
 	padding: 40px;
 	width: 25%;
+	display: inline-block;
 	background-color: #CCCCCC;
 	height: 200px;
-	display: inline-block;
 }
 
 .leftsquare h1 {
