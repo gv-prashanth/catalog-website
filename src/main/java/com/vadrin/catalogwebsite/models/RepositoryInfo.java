@@ -1,6 +1,6 @@
 package com.vadrin.catalogwebsite.models;
 
-import org.springframework.util.StringUtils;
+import org.apache.commons.text.WordUtils;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -11,8 +11,12 @@ public class RepositoryInfo {
 	private String description;
 	private String html_url;
 
+	public String getFormattedName() {
+		return WordUtils.capitalizeFully(name.replace("-", " "));
+	}
+
 	public String getName() {
-		return StringUtils.capitalize(name.replace("-", " "));
+		return name;
 	}
 
 	public void setName(String name) {
