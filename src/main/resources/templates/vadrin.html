@@ -19,7 +19,7 @@
 				<img src="/images/vadrin3.jpg" alt="Vadrin" />
 			</div>
 			<div class="catalog">
-				<div class="leftsquare" th:each="repositoryInfo : ${catalogInfo}">
+				<div class="square" th:each="repositoryInfo : ${catalogInfo}">
 					<h1 th:text="${repositoryInfo.name}" ></h1>
 					<p th:text="${repositoryInfo.description}" />
 				</div>
