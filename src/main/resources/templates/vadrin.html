@@ -19,7 +19,7 @@
 				<img src="/images/vadrin3.jpg" alt="Vadrin" />
 			</div>
 			<div class="catalog">
-				<div class="square" th:each="repositoryInfo : ${catalogInfo}">
+				<div class="square" th:each="repositoryInfo : ${catalogInfo}" style="background-image: url('https://image.thum.io/get/noanimate/http://cows-n-bulls.herokuapp.com');">
 					<h1 th:text="${repositoryInfo.formattedName}" ></h1>
 					<p th:text="${repositoryInfo.description}" />
 				</div>
