@@ -10,6 +10,8 @@ public class RepositoryInfo {
 	private String name;
 	private String description;
 	private String html_url;
+	private String site_url;
+	private String full_name;
 
 	public String getFormattedName() {
 		return WordUtils.capitalizeFully(name.replace("-", " "));
@@ -37,6 +39,22 @@ public class RepositoryInfo {
 
 	public void setHtml_url(String html_url) {
 		this.html_url = html_url;
+	}
+
+	public String getSite_url() {
+		return site_url;
+	}
+
+	public void setSite_url(String site_url) {
+		this.site_url = site_url;
+	}
+
+	public String getFull_name() {
+		return full_name;
+	}
+
+	public void setFull_name(String full_name) {
+		this.full_name = full_name;
 	}
 
 }
