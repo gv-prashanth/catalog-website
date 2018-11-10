@@ -16,7 +16,7 @@ public class HomePageController {
 	@GetMapping("/")
 	public String home(Model model) {
 		model.addAttribute("catalogInfo", gitHubService.getCatalogInfo());
-		return "vadrin";
+		return "homepageTemplate";
 	}
 	
 	@GetMapping("/vadrin")
@@ -24,13 +24,13 @@ public class HomePageController {
 		return home(model);
 	}
 
-	@GetMapping("/aboutus")
-	public String aboutus() {
-		return "aboutus";
+	@GetMapping("/about")
+	public String about() {
+		return "simpleTemplate";
 	}
 	
-	@GetMapping("/contactus")
-	public String contactus() {
-		return "contactus";
+	@GetMapping("/contact")
+	public String contact() {
+		return "simpleTemplate";
 	}
 }
