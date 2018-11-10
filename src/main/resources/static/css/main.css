@@ -5,14 +5,14 @@
 
 .catalog {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 31% 31% 31%;
     grid-gap: 50px;
     padding: 50px;
 }
 
 .logo {
 	text-align: center;
-	padding: 40px 0px 40px 0px;
+	padding: 40px 0px 0px 0px;
 }
 
 .footer {
@@ -30,8 +30,13 @@
     border-radius: 25px;
     padding: 20px;
     background-color: #CCCCCC;
-    height: 200px;
    	text-align: center;
+}
+
+.repoPic {
+    margin-left: 50px;
+    margin-right: 50px;
+    overflow: hidden;
 }
 
 .navigation {

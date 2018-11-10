@@ -21,10 +21,17 @@
 			<div class="catalog">
 				<div class="square" th:id="${repositoryInfo.formattedName}"
 					th:each="repositoryInfo : ${catalogInfo}">
-<!-- 					th:style="'background: url(https://image.thum.io/get/noanimate/' + ${repositoryInfo.site_url} + ')'"> -->
-					<h1 th:text="${repositoryInfo.formattedName}"></h1>
-					<p th:text="${repositoryInfo.description}" />
-					<a target="_blank"  th:href="${repositoryInfo.site_url}">Check it out!</a>
+					<div class="repoHeader">
+						<h1 th:text="${repositoryInfo.formattedName}"></h1>
+					</div>
+					<div class="repoDesc">
+						<p th:text="${repositoryInfo.description}" />
+					</div>
+					<div class="repoPic">
+					<a target="_blank"  th:href="${repositoryInfo.site_url}">
+						<img style="width: 100%;" th:src="'https://image.thum.io/get/width/450/crop/700/noanimate/' + ${repositoryInfo.site_url} + ''" />
+					</a>
+					</div>
 				</div>
 			</div>
 		</div>
