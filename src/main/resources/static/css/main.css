@@ -11,7 +11,7 @@
 @media only screen and (max-width: 1080px) {
     /* For tablet phones: */
     [class*="catalog"] {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: auto;
     }
 }
 
