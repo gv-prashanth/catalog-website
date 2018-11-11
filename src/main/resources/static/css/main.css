@@ -20,6 +20,9 @@
     [class*="catalog"] {
         grid-template-columns: auto;
     }
+    [class*="repoPic"] {
+       opacity: 1;
+    }
 }
 
 .logo {
