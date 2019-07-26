@@ -31,6 +31,6 @@ public class HomePageController {
 	
 	@GetMapping("/contact")
 	public String contact() {
-		return "simpleTemplate";
+		return "contactTemplate";
 	}
 }
