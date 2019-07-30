@@ -12,6 +12,7 @@ public class RepositoryInfo {
 	private String html_url;
 	private String site_url;
 	private String full_name;
+	private String base64Screenshot;
 
 	public String getFormattedName() {
 		return WordUtils.capitalizeFully(name.replace("-", " "));
@@ -55,6 +56,14 @@ public class RepositoryInfo {
 
 	public void setFull_name(String full_name) {
 		this.full_name = full_name;
+	}
+
+	public String getBase64Screenshot() {
+		return base64Screenshot;
+	}
+
+	public void setBase64Screenshot(String base64Screenshot) {
+		this.base64Screenshot = base64Screenshot;
 	}
 
 }

@@ -1,6 +1,5 @@
 package com.vadrin.catalogwebsite.services;
 
-import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -28,14 +27,14 @@ public class GitHubService {
 	public RepositoryInfo[] getCatalogInfo() {
 		RepositoryInfo[] toReturn = restTemplateBuilder.build()
 				.getForObject("https://api.github.com/users/gv-prashanth/repos", RepositoryInfo[].class);
-		Arrays.stream(toReturn).forEach(repositoryInfo -> repositoryInfo.setSite_url(getReadmeInfo(repositoryInfo)));
 		return toReturn;
 	}
 
-	private String getReadmeInfo(RepositoryInfo repositoryInfo) {
+	@Cacheable(value = "githubReadmeInfo")
+	public String getReadmeInfo(String fullName, String fallbackHtmlUrl) {
 		try {
 			String readMeContent = restTemplateBuilder.build().getForObject(
-					"https://raw.githubusercontent.com/" + repositoryInfo.getFull_name() + "/master/README.md",
+					"https://raw.githubusercontent.com/" + fullName + "/master/README.md",
 					String.class);
 			Matcher matcher = urlPattern.matcher(readMeContent);
 			while (matcher.find()) {
@@ -44,9 +43,9 @@ public class GitHubService {
 			    return readMeContent.substring(matchStart, matchEnd);
 			}
 		} catch (HttpClientErrorException e) {
-			System.out.println(repositoryInfo.getFull_name() + " does not have a README.md file.");
+			System.out.println(fullName + " does not have a README.md file.");
 		}
-		return repositoryInfo.getHtml_url();
+		return fallbackHtmlUrl;
 	}
 
 }

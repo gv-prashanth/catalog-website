@@ -33,7 +33,7 @@
 					<div class="repoPic">
 						<a target="_blank" th:href="${repositoryInfo.site_url}"> <img
 							style="width: 100%;"
-							th:src="'https://image.thum.io/get/width/450/crop/700/noanimate/' + ${repositoryInfo.site_url} + ''" />
+							th:src="'data:image/png;base64,' + ${repositoryInfo.base64Screenshot} + ''" />
 						</a>
 					</div>
 				</div>
