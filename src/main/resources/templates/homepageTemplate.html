@@ -8,6 +8,7 @@
 <title>Vadrin</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="/css/main.css?vad=rin" />
+<script src="/js/allscripts.js"></script>
 </head>
 <body>
 	<div class="main">
@@ -17,8 +18,8 @@
 				<li><a href="/about">About</a></li>		
 			</ul>
 			<div class="search-container">
-			    <input type="text" placeholder="Search.." name="search">
-			    <button type="submit"><i class="fa fa-search"></i></button>
+			    <input type="text" placeholder="Search.." name="search" onkeyup="checkAndHide();" id="search">
+			    <button type="button" onclick="checkAndHide();"><i class="fa fa-search"></i></button>
 			</div>
 		</div>
 		<div class="content">
