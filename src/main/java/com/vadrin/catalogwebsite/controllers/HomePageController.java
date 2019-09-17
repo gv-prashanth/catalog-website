@@ -38,12 +38,7 @@ public class HomePageController {
 
 	@GetMapping("/about")
 	public String about() {
-		return "simpleTemplate";
-	}
-
-	@GetMapping("/contact")
-	public String contact() {
-		return "contactTemplate";
+		return "aboutTemplate";
 	}
 
 }

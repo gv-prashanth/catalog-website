@@ -3,19 +3,27 @@
 	margin-top: 8px;
 }
 
+.content{
+	/* min-height: 800px; */
+}
+
 .catalog {
     display: grid;
+    /* For desktops: */
     grid-template-columns: repeat(3, 1fr);
 }
 
-.content{
-	min-height: 800px;
-}
-
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 768px) {
     /* For mobile phones: */
     [class*="catalog"] {
         grid-template-columns: auto;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+    /* For tablets: */
+    [class*="catalog"] {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -26,34 +34,11 @@
 
 .footer {
 	background-color: #1e1e1e;
-	color: #bfb5b5;
+	color: white;
 	text-align: center;
-	padding:0px;
+	padding:8px;
 	margin:0px;
-}
-
-.footer_caption{
-	padding: 5px;
-	font-family: Geneva;
-	font-size: 0.8em;	
-}
-
-.footer_company{
-	padding-bottom: 1px;
-}
-
-.footer_icons{
-	padding-top: 3px;
-	padding-bottom: 10px;	
-}
-
-.footer_icons span{
-	padding-right: 10px;
-}
-
-.footer_icons img{
-	width: 20ox;
-	height: 20px;
+	font-weight: bold;
 }
 
 .navigation ul{
@@ -65,6 +50,7 @@
 	top: 0;
 	left: 0;
 	width: 100%;
+	font-weight: bold;
 }
 
 body{
