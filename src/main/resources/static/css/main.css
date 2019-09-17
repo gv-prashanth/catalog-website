@@ -41,12 +41,15 @@
 	font-weight: bold;
 }
 
+.navigation {
+	overflow: hidden;
+	background-color: #5f5f5f;
+}
+
 .navigation ul{
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
-	background-color: #5f5f5f;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -123,4 +126,30 @@ body{
 
 .repoDesc{
 	font-size: 0.9em;	
+}
+
+.navigation .search-container {
+  float: right;
+}
+
+.navigation input[type=text] {
+  padding: 6px;
+  margin-top: 4px;
+  font-size: 17px;
+  border: none;
+}
+
+.navigation .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 4px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.navigation .search-container button:hover {
+  background: #ccc;
 }
