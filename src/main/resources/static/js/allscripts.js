@@ -11,3 +11,7 @@ function checkAndHide(){
 	  }
 	}
 }
+
+function clearSearchBox(){
+	document.getElementById("search").value = "";
+}
