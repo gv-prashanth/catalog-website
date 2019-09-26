@@ -1,6 +1,6 @@
 package com.vadrin.catalogwebsite.controllers;
 
-import java.util.Arrays;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,10 +22,10 @@ public class HomePageController {
 
 	@GetMapping("/")
 	public String home(Model model) {
-		RepositoryInfo[] repoInfo = gitHubService.getCatalogInfo();
-		Arrays.stream(repoInfo).forEach(repositoryInfo -> repositoryInfo
+		List<RepositoryInfo> repoInfo = gitHubService.getCatalogInfo();
+		repoInfo.forEach(repositoryInfo -> repositoryInfo
 				.setSite_url(gitHubService.getReadmeInfo(repositoryInfo.getFull_name(), repositoryInfo.getHtml_url())));
-		Arrays.stream(repoInfo).forEach(repositoryInfo -> repositoryInfo
+		repoInfo.forEach(repositoryInfo -> repositoryInfo
 				.setBase64Screenshot(screenshotService.getScreenshot(repositoryInfo.getSite_url())));
 		model.addAttribute("catalogInfo", repoInfo);
 		return "homepageTemplate";

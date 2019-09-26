@@ -13,6 +13,7 @@ public class RepositoryInfo {
 	private String site_url;
 	private String full_name;
 	private String base64Screenshot;
+	private boolean fork;
 
 	public String getFormattedName() {
 		return WordUtils.capitalizeFully(name.replace("-", " "));
@@ -64,6 +65,14 @@ public class RepositoryInfo {
 
 	public void setBase64Screenshot(String base64Screenshot) {
 		this.base64Screenshot = base64Screenshot;
+	}
+
+	public boolean isFork() {
+		return fork;
+	}
+
+	public void setFork(boolean fork) {
+		this.fork = fork;
 	}
 
 }
