@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xml:lang="en">
 <head>
 <meta http-equiv="content-type"
 	content="text/html; charset=windows-1250">
@@ -27,7 +27,7 @@
 			</div>
 			<div class="search-container">
 			    <input type="text" placeholder="Search.." name="search" onkeyup="checkAndHide();" id="search">
-			    <button type="button" onclick="clearSearchBox(); checkAndHide();"><i class="fa fa-times-circle"></i></button>
+			    <button type="button" onclick="clearSearchBox(); checkAndHide();"><em class="fa fa-times-circle"></em></button>
 			</div>
 			<div class="catalog">
 				<div class="square" th:id="${repositoryInfo.formattedName}"
@@ -39,7 +39,7 @@
 						<p th:text="${repositoryInfo.description}" />
 					</div>
 					<div class="repoPic">
-						<a target="_blank" th:href="${repositoryInfo.site_url}"> <img
+						<a target="_blank" th:href="${repositoryInfo.site_url}"> <img alt="site picture"
 							style="width: 100%;"
 							th:src="'data:image/png;base64,' + ${repositoryInfo.base64Screenshot} + ''" />
 						</a>
