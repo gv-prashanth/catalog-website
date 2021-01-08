@@ -26,8 +26,7 @@
 				<img src="/images/vadrin3.jpg" alt="Vadrin" />
 			</div>
 			<div class="search-container">
-			    <input type="text" placeholder="Search.." name="search" onkeyup="checkAndHide();" id="search">
-			    <button type="button" onclick="clearSearchBox(); checkAndHide();"><em class="fa fa-times-circle"></em></button>
+			    <input type="search" incremental="incremental" placeholder="Search.." name="search" onsearch="checkAndHide();" id="search">
 			</div>
 			<div class="catalog">
 				<div class="square" th:id="${repositoryInfo.formattedName}"
