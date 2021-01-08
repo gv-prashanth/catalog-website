@@ -30,7 +30,6 @@ public class ScreenshotService {
 				e.printStackTrace();
 			}
 		}
-		System.out.println(toReturn);
 		return toReturn;
 	}
 
