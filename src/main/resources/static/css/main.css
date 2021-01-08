@@ -128,29 +128,27 @@ body{
 	font-size: 0.9em;	
 }
 
-.navigation .search-container {
-  float: right;
+.search-container {
+  text-align: center;
+  margin: 25px;
 }
 
-.navigation input[type=text] {
-  padding: 6px;
-  margin-top: 4px;
+.search-container input[type=text] {
+  width: 50%;
+  height: 32px;
+  padding: 5px;
   font-size: 17px;
-  border: none;
-  width: 100px;
 }
 
-.navigation .search-container button {
-  float: right;
-  padding: 6px 10px;
-  margin-top: 4px;
-  margin-right: 16px;
+.search-container button {
   background: #ddd;
   font-size: 17px;
   border: none;
   cursor: pointer;
+  width: 46px;
+  height: 46px;
 }
 
-.navigation .search-container button:hover {
+.search-container button:hover {
   background: #ccc;
 }

@@ -4,13 +4,12 @@ import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Base64;
 
 import javax.imageio.ImageIO;
 
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
-
-import sun.misc.BASE64Encoder;
 
 @Service
 public class ScreenshotService {
@@ -40,8 +39,7 @@ public class ScreenshotService {
 		ByteArrayOutputStream bos = new ByteArrayOutputStream();
 		ImageIO.write(image, type, bos);
 		byte[] imageBytes = bos.toByteArray();
-		BASE64Encoder encoder = new BASE64Encoder();
-		imageString = encoder.encode(imageBytes);
+		imageString = Base64.getEncoder().encodeToString(imageBytes);
 		bos.close();
 		return imageString;
 	}
