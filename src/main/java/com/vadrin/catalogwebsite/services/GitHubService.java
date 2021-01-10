@@ -31,7 +31,7 @@ public class GitHubService {
 					+ "[\\p{Alnum}.,%_=?&#\\-+()\\[\\]\\*$~@!:/{};']*)",
 			Pattern.CASE_INSENSITIVE | Pattern.MULTILINE | Pattern.DOTALL);
 	private static final String READMEPATH = "/master/README.md";
-	private static final String[] GITHUBACCOUNTS = {"gv-prashanth", "bj-krishna"};
+	private static final String[] GITHUBACCOUNTS = {"gv-prashanth"};//disabling for now "bj-krishna"
 
 	@Cacheable(value = "githubCatalogInfo")
 	public List<RepositoryInfo> getCatalogInfo() {
