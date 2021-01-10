@@ -145,6 +145,20 @@ border-width: 2px;
   width: 50%;
 }
 
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .search-container input[type=search] {
+        width: 85%;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+    /* For tablets: */
+    .search-container input[type=search] {
+        width: 65%;
+    }
+}
+
 .search-container input[type=search]:focus {
   outline: none;
 }
