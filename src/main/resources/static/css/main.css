@@ -142,7 +142,7 @@ border-width: 2px;
   padding: 10px;
   font-size: 20px;
   box-sizing: border-box;
-  width: 40%;
+  width: 50%;
 }
 
 .search-container input[type=search]:focus {
