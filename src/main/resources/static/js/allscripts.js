@@ -1,8 +1,11 @@
 function checkAndHide(){
 	var x = document.getElementsByClassName("square");
 	var valueToSearch = document.getElementById("search").value;
-	var i;
-	for (i = 0; i < x.length; i++) {
+	if(valueToSearch.toLowerCase().includes("songs from arijit singh"))
+	  window.location.href = 'https://v-talk-site.herokuapp.com/testi.html' + '?sender=arijit singh&receiver=shreya ghoshal';
+	if(valueToSearch.toLowerCase().includes("songs from shreya ghoshal"))
+	  window.location.href = 'https://v-talk-site.herokuapp.com/testi.html' + '?sender=shreya ghoshal&receiver=arijit singh';
+	for (var i = 0; i < x.length; i++) {
 	  var valueInBox = x[i].textContent;
 	  if(!valueInBox.toLowerCase().includes(valueToSearch.toLowerCase())){
 		  x[i].style.display = "none";
