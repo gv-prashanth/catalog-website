@@ -21,7 +21,7 @@ function clearSearchBox(){
 
 function goToOnlineChat(sender, receiver){
 	var f = document.createElement('form');
-	f.action='https://v-talk-site.herokuapp.com/online';
+	f.action='https://v-talk-site-mirror.herokuapp.com/online';
 	f.method='POST';
 	
 	var i=document.createElement('input');
