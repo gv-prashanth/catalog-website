@@ -12,7 +12,10 @@ import javax.imageio.ImageIO;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Service
+@Slf4j
 public class ScreenshotService {
 
 	private static final int RETRYCOUNT = 5;
@@ -31,6 +34,7 @@ public class ScreenshotService {
 				toReturn = encodeToString(image, "png");
 			} catch (Exception e) {
 				e.printStackTrace();
+				log.error("An exception occurred while getScreenshot", e);
 			}
 		}
 		return toReturn;

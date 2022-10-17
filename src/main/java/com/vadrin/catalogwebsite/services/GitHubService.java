@@ -15,7 +15,10 @@ import org.springframework.web.client.HttpClientErrorException;
 
 import com.vadrin.catalogwebsite.models.RepositoryInfo;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Service
+@Slf4j
 public class GitHubService {
 
 	@Autowired
@@ -56,7 +59,7 @@ public class GitHubService {
 				return readMeContent.substring(matchStart, matchEnd);
 			}
 		} catch (HttpClientErrorException e) {
-			System.out.println(fullName + " does not have a README.md file.");
+			log.error(fullName + " does not have a README.md file.");
 		}
 		return fallbackHtmlUrl;
 	}
