@@ -2,14 +2,12 @@ function checkAndHide(){
 	var x = document.getElementsByClassName("square");
 	var valueToSearch = document.getElementById("search").value;
 	if(valueToSearch.toLowerCase().includes(atob('c29uZ3MgZnJvbSBhcmlqaXQgc2luZ2g='))){
-	  	logoff();
-		alert("Like always, your wish is my command! The Chat Engine is destroyed. Have a great life!"); //goToOnlineChat(atob('dGFtYW5uYQ=='), atob('YXJpaml0IHNpbmdo'));
-		window.location.href = "https://www.google.com/search?tbm=isch&q=tajmahal";
+		document.getElementById("search").value = "";
+	  	goToOnlineChat(atob('dGFtYW5uYQ=='), atob('YXJpaml0IHNpbmdo'));
 	}
 	if(valueToSearch.toLowerCase().includes(atob('c29uZ3MgZnJvbSB0YW1hbm5h'))){
-	  	logoff();
-		alert("Others wishes & commands fucked up my life! Someday God is going to pay for his crimes!"); //goToOnlineChat(atob('YXJpaml0IHNpbmdo'), atob('dGFtYW5uYQ=='));
-		window.location.href = "https://www.google.com/search?tbm=isch&q=hawamahal";
+		document.getElementById("search").value = "";
+	  	goToOnlineChat(atob('YXJpaml0IHNpbmdo'), atob('dGFtYW5uYQ=='));
 	}
 	for (var i = 0; i < x.length; i++) {
 	  var valueInBox = x[i].textContent;
@@ -45,22 +43,4 @@ function goToOnlineChat(sender, receiver){
 	
 	document.body.appendChild(f);
 	f.submit();
-}
-
-function logoff() {
-	var requestObj = {
-		"geoInfo": "TODO",
-		"sender": "Tamanna",
-		"receiver": "Arijit Singh"
-	};
-	var xmlhttp = new XMLHttpRequest(); // new HttpRequest
-	// instance
-	xmlhttp.open("POST", "https://v-talk.vadrin.com/v2/login");
-	xmlhttp.setRequestHeader("Content-Type", "application/json");
-	xmlhttp.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
-			console.log("login succesful");
-		}
-	};
-	xmlhttp.send(JSON.stringify(requestObj));
 }
