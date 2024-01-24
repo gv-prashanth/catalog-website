@@ -40,9 +40,13 @@ public class GitHubService {
 	public List<RepositoryInfo> getCatalogInfo() {
 		List<RepositoryInfo> toReturn = new ArrayList<RepositoryInfo>();
 		for (String thisAccount : GITHUBACCOUNTS) {
-			RepositoryInfo[] thisAccountRepos = restTemplateBuilder.build()
-					.getForObject(GITHUBAPIENDPOINT + USERS + "/" + thisAccount + "/" + REPOS, RepositoryInfo[].class);
-			toReturn.addAll(Arrays.asList(thisAccountRepos));
+			try {
+				RepositoryInfo[] thisAccountRepos = restTemplateBuilder.build()
+						.getForObject(GITHUBAPIENDPOINT + USERS + "/" + thisAccount + "/" + REPOS, RepositoryInfo[].class);
+				toReturn.addAll(Arrays.asList(thisAccountRepos));
+			} catch (HttpClientErrorException e) {
+				log.error("github error: " + e.getMessage());
+			}
 		}
 		return toReturn.stream().filter(r -> !r.isFork()).collect(Collectors.toList());
 	}
