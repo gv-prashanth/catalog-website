@@ -75,4 +75,9 @@ public class RepositoryInfo {
 		this.fork = fork;
 	}
 
+	public RepositoryInfo() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 }

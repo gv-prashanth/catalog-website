@@ -9,7 +9,6 @@ import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
 
@@ -36,7 +35,6 @@ public class GitHubService {
 	private static final String READMEPATH = "/master/README.md";
 	private static final String[] GITHUBACCOUNTS = {"gv-prashanth"};//disabling for now "bj-krishna"
 
-	@Cacheable(value = "githubCatalogInfo")
 	public List<RepositoryInfo> getCatalogInfo() {
 		List<RepositoryInfo> toReturn = new ArrayList<RepositoryInfo>();
 		for (String thisAccount : GITHUBACCOUNTS) {
@@ -51,7 +49,6 @@ public class GitHubService {
 		return toReturn.stream().filter(r -> !r.isFork()).collect(Collectors.toList());
 	}
 
-	@Cacheable(value = "githubReadmeInfo")
 	public String getReadmeInfo(String fullName, String fallbackHtmlUrl) {
 		try {
 			String readMeContent = restTemplateBuilder.build().getForObject(GITHUBCONTENTURL + fullName + READMEPATH,
