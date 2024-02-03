@@ -35,7 +35,7 @@
 				<img src="/images/vadrinMedium.png" alt="Vadrin" width="279"/>
 			</div>
 			<div class="search-container">
-			    <input type="search" incremental="incremental" placeholder="Search Projects..." name="search" onsearch="checkAndHide();" id="search">
+			    <input type="text" incremental="incremental" placeholder="Search Projects..." name="search" oninput="checkAndHide();" id="search">
 			</div>
 			<div class="catalog">
 				<div class="square" th:id="${repositoryInfo.formattedName}"

@@ -133,7 +133,7 @@ body{
   margin: 25px;
 }
 
-.search-container input[type=search] {
+.search-container input[type=text] {
 border-width: 2px;
   border-width: 2px;
   border-color: #cccccc;
