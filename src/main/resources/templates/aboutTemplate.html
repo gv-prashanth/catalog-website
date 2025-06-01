@@ -12,18 +12,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css?vad=rin">
 <link rel="stylesheet" type="text/css" href="/css/main.css?vad=rin" />
 <script src="/js/allscripts.js"></script>
-<!--
-<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
-<script>
-  function addDarkmodeWidget() {
-    new Darkmode().showWidget();
-  }
-  window.addEventListener('load', addDarkmodeWidget);
-</script>
--->
 </head>
 <body>
-	<div class="main">
+	<div class="main"> <div class="content-area">
 		<div class="navigation">
 			<ul>
 				<li><a href="/">Home</a></li>
@@ -32,7 +23,10 @@
 		</div>
 		<div class="content">
 			<div class="logo">
-				<img src="/images/vadrinMedium.png" alt="Vadrin" width="279"/>
+				<picture>
+				  <source srcset="/images/vadrinMedium_dark.png" media="(prefers-color-scheme: dark)">
+				  <img src="/images/vadrinMedium.png" alt="Vadrin" width="279"/>
+				</picture>
 			</div>
 			<div class="catalog">
 				<div class="square">
@@ -53,7 +47,7 @@
 						<p>Nick: Vader</p>
 						<p>Race: Human</p>
 						<p>Class: Warlock</p>
-						<p>Connect: <a href="https://github.com/gv-prashanth"><img width=50px src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png" alt="github" /></a></p>	
+						<p>Connect: <a href="https://github.com/gv-prashanth"><img id="githubimg" width=50px src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png" alt="github" /></a></p>	
 					</div>
 				</div>
 				<div class="square">
@@ -65,11 +59,11 @@
 						<p>Nick: Rincey</p>
 						<p>Race: Human</p>
 						<p>Class: Priest</p>
-						<p>Connect: <a href="https://github.com/bj-krishna"><img width=50px src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png" alt="github" /></a></p>
+						<p>Connect: <a href="https://github.com/bj-krishna"><img id="githubimg" width=50px src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png" alt="github" /></a></p>
 					</div>
 				</div>
 			</div>
-		</div>
+		</div></div>
 		<div class="footer">
 			Projects crafted with Love & Passion | All Rights Reserved.					
 		</div>  
